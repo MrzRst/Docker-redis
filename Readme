@@ -1,0 +1,6 @@
+docker build -t redis -f dockerfile .
+docker run -d -p 6000:6379 --name redis redis
+docker exec -it redis sh
+redis-cli ping
+exit
+docker logs redis
